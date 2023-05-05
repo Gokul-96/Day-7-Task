@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+//Get all the countries from Asia continent /region using Filter function
+
+let request=new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all','true');
+request.send();
+request.onload=function (){
+    let countryData=JSON.parse(this.response);
+    let asia=countryData.filter((element)=>{
+        if(element.region==='Asia'){
+            return element.name;
+        }
+    })
+    console.log(asia);}
+
+
+//Get all the countries with population of less than 2 lacs using Filter function
+
+let request=new XMLHttpRequest();
+request.open('GET',''https://restcountries.com/v3.1/all”,'true');
+request.send();
+request.onload=function (){
+    let countryData=JSON.parse(this.response);
+    let p=countryData.filter((element)=>{
+        return element.population<200000;
+    })
+    console.log(p);}
+
+
+//Print the following details name, capital, flag using for Each function.
+
+let request=new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all','true');
+request.send();
+request.onload=function (){
+    let countryData=JSON.parse(this.response);
+    countryData.forEach((element)=>{
+        console.log(element.name,element.capital,element.flag);
+    })}
+
+
+//Print the total population of countries using reduce function 
+
+Let request=new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all','true');
+','true');
+request.send();
+request.onload=function (){
+    Let  countryData=JSON.parse(this.response);
+    const p=countryData.reduce((acc,element)=>{
+        return acc+element.p;
+    },0)
+    console.log(p);} -->
+
+</body>
+</html>
